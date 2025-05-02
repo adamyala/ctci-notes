@@ -18,3 +18,25 @@ class TestSection1(unittest.TestCase):
 
     def test_section_1_3(self):
         assert section_1.urlify(input_string='Mr  John   Smith    ', some_int=13) == 'Mr%20John%20Smith'
+
+    def test_section_1_5(self):
+        assert section_1.one_away(one='pale', two='ple')
+        assert section_1.one_away(one='pales', two='pale')
+        assert section_1.one_away(one='pale', two='bale')
+        assert not section_1.one_away(one='pale', two='bake')
+
+    def test_section_1_6(self):
+        assert section_1.string_compression('aabcccccaaa') == 'a2b1c5a3'
+
+    def test_section_1_7(self):
+        matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ]
+        output = [
+            [7, 4, 1],
+            [8, 5, 2],
+            [9, 6, 3],
+        ]
+        assert section_1.rotate_matrix(matrix=matrix) == output
