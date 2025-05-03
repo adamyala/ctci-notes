@@ -90,3 +90,22 @@ def rotate_matrix(matrix):
         for index, element in enumerate(old_row):
             new_matrix[index].append(element)
     return new_matrix
+
+# 1.8
+# Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0,
+# its entire row and column are set to 0.
+def zero_matrix(matrix):
+    zero_coords = []
+    for y, row in enumerate(matrix):
+        for x, element in enumerate(row):
+            if element == 0:
+                zero_coords.append([y, x])
+
+    for y, x in zero_coords:
+        target_row = matrix[y]
+        for index in range(len(target_row)):
+            target_row[index] = 0
+        for index, _ in enumerate(matrix):
+            matrix[index][x] = 0
+    return matrix
+

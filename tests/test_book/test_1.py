@@ -40,3 +40,16 @@ class TestSection1(unittest.TestCase):
             [9, 6, 3],
         ]
         assert section_1.rotate_matrix(matrix=matrix) == output
+
+    def test_section_1_8(self):
+        matrix = [
+            [1, 2, 3],
+            [0, 5, 6],
+            [7, 8, 9],
+        ]
+        output = [
+            [0, 2, 3],
+            [0, 0, 0],
+            [0, 8, 9],
+        ]
+        assert section_1.zero_matrix(matrix=matrix) == output
