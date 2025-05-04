@@ -40,11 +40,11 @@ class Line:
             self.space_mapping[index] = 1
 
     def print_line(self):
-        output = ''
+        output = ""
         for index, word in enumerate(self.words):
             output += word
             try:
-                output += ' ' * self.space_mapping[index]
+                output += " " * self.space_mapping[index]
             except KeyError:
                 pass
         print(output)
@@ -54,7 +54,7 @@ class Line:
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 width = 30
 
-words = text.split(' ')
+words = text.split(" ")
 lines = []
 line = Line()
 for word in words:

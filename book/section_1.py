@@ -17,6 +17,7 @@ def unique_letters_no_structs(input_string):
 # Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 def check_permutation(one, two):
     from itertools import permutations
+
     return tuple(two) in list(permutations(one))
 
 
@@ -35,7 +36,7 @@ def check_permutation_no_libs(one, two):
 # characters,and that you are given the "true" length of the string.
 def urlify(input_string, some_int):
     words = input_string.split()
-    urlified = '%20'.join(words)
+    urlified = "%20".join(words)
     return urlified
 
 
@@ -74,9 +75,9 @@ def string_compression(input_string):
         count += 1
     counts.append([current_letter, count])
 
-    output = ''
+    output = ""
     for count in counts:
-        output += (count[0] + str(count[1]))
+        output += count[0] + str(count[1])
 
     return output
 
@@ -90,6 +91,7 @@ def rotate_matrix(matrix):
         for index, element in enumerate(old_row):
             new_matrix[index].append(element)
     return new_matrix
+
 
 # 1.8
 # Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0,
@@ -108,4 +110,3 @@ def zero_matrix(matrix):
         for index, _ in enumerate(matrix):
             matrix[index][x] = 0
     return matrix
-
