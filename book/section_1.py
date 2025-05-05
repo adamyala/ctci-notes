@@ -110,3 +110,12 @@ def zero_matrix(matrix):
         for index, _ in enumerate(matrix):
             matrix[index][x] = 0
     return matrix
+
+
+# 1.9
+# String Rotation:Assumeyou have a method isSubstringwhich checks if oneword is a substring of another.
+# Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only one call to
+# isSubstring (e.g.,"waterbottle" is a rotation of"erbottlewat").
+def string_rotation(s1, s2):
+    s1_concat = s1 + s1
+    return s2 in s1_concat

@@ -56,3 +56,6 @@ class TestSection1(unittest.TestCase):
             [0, 8, 9],
         ]
         assert section_1.zero_matrix(matrix=matrix) == output
+
+    def test_section_1_9(self):
+        assert section_1.string_rotation(s1="erbottlewat", s2="waterbottle")
