@@ -44,6 +44,14 @@ def urlify(input_string, some_int):
 # Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome.
 # A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement
 # of letters. The palindrome does not need to be limited to just dictionary words.
+def palindrome_permutation(input_string):
+    from itertools import permutations
+
+    input_no_spaces = input_string.lower().replace(" ", "")
+    string_permutations = list(permutations(input_no_spaces))
+    for string_permutation in string_permutations:
+        if string_permutation == string_permutation[::-1]:
+            return True
 
 
 # 1.5

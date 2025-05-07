@@ -22,6 +22,9 @@ class TestSection1(unittest.TestCase):
             == "Mr%20John%20Smith"
         )
 
+    def test_section_1_4(self):
+        assert section_1.palindrome_permutation(input_string="Tact Coa")
+
     def test_section_1_5(self):
         assert section_1.one_away(one="pale", two="ple")
         assert section_1.one_away(one="pales", two="pale")
