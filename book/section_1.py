@@ -85,7 +85,7 @@ def string_compression(input_string):
 
     output = ""
     for count in counts:
-        output += count[0] + str(count[1])
+        output += f"{count[0]}{count[1]}"
 
     return output
 
