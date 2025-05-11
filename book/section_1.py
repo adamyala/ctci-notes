@@ -34,7 +34,7 @@ def check_permutation_no_libs(one, two):
 # URLify: Write a method to replace all spaces in a string with '%20'.
 # You may assume that the string has sufficient space at the end to hold the additional
 # characters,and that you are given the "true" length of the string.
-def urlify(input_string, some_int):
+def urlify(input_string, string_length):
     words = input_string.split()
     urlified = "%20".join(words)
     return urlified
@@ -52,6 +52,21 @@ def palindrome_permutation(input_string):
     for string_permutation in string_permutations:
         if string_permutation == string_permutation[::-1]:
             return True
+
+
+def palindrome_permutation_no_itertools(input_string):
+    from collections import Counter
+
+    input_no_spaces = input_string.lower().replace(" ", "")
+    counter = Counter(input_no_spaces)
+    letter_counts = list(counter.values())
+    odd_letters = 0
+    for letter_count in letter_counts:
+        if letter_count % 2:
+            odd_letters += 1
+            if odd_letters > 1:
+                return False
+    return True
 
 
 # 1.5

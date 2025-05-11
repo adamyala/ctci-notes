@@ -18,12 +18,16 @@ class TestSection1(unittest.TestCase):
 
     def test_section_1_3(self):
         assert (
-            section_1.urlify(input_string="Mr  John   Smith    ", some_int=13)
+            section_1.urlify(input_string="Mr  John   Smith    ", string_length=13)
             == "Mr%20John%20Smith"
         )
 
     def test_section_1_4(self):
-        assert section_1.palindrome_permutation(input_string="Tact Coa")
+        assert section_1.palindrome_permutation_no_itertools(input_string="Tact Coa")
+        assert section_1.palindrome_permutation_no_itertools(input_string="Foo Foo Bob")
+        assert not section_1.palindrome_permutation_no_itertools(
+            input_string="Foo Foo Boba"
+        )
 
     def test_section_1_5(self):
         assert section_1.one_away(one="pale", two="ple")
