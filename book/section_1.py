@@ -90,7 +90,7 @@ def string_compression(input_string):
     current_letter = None
     count = 0
 
-    for letter in input_string:
+    for letter in input_string.lower():
         if current_letter and current_letter != letter:
             counts.append([current_letter, count])
             count = 0
@@ -102,7 +102,10 @@ def string_compression(input_string):
     for count in counts:
         output += f"{count[0]}{count[1]}"
 
-    return output
+    if len(output) < len(input_string):
+        return output
+    else:
+        return input_string
 
 
 # 1.7

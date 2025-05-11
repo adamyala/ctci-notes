@@ -37,6 +37,7 @@ class TestSection1(unittest.TestCase):
 
     def test_section_1_6(self):
         assert section_1.string_compression("aabcccccaaa") == "a2b1c5a3"
+        assert section_1.string_compression("abcdef") == "abcdef"
 
     def test_section_1_7(self):
         matrix = [
